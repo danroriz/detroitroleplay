@@ -1,11 +1,6 @@
 site_name: Detroit Roleplay
 site_url: https://regulamento.detroitroleplay.com
-docs_dir: .
-exclude_docs: |
-  .gitbook/
-  .github/
-  mkdocs.yml
-  index.html
+docs_dir: docs
 
 theme:
   name: material
