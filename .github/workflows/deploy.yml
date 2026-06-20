@@ -21,5 +21,6 @@ jobs:
         run: |
           mkdir -p docs
           rsync -av --exclude='docs' --exclude='.github' --exclude='mkdocs.yml' --exclude='index.html' --exclude='.nojekyll' --exclude='.git' . docs/
+          find docs/ -name "*.md" -exec sed -i '/^icon:/d' {} \;
       - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
